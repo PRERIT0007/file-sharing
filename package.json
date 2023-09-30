@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp client/build/index.html public/client.html && cp server/build/index.html public/server.html",
     "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
     "start:client": "cd client && npm start",
     "start:server": "cd server && npm start"
@@ -12,5 +12,5 @@
   "devDependencies": {
     "concurrently": "^8.2.1",
     "eslint": "^8.50.0"
-  }
+    }
 }
